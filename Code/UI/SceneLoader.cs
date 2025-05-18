@@ -10,6 +10,5 @@ public class SceneLoader : MonoBehaviour, IUIButton
     public void Click()
     {
         SceneManager.LoadScene(_sceneName);
-
     }
 }

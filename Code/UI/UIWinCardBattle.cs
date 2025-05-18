@@ -26,19 +26,16 @@ public class UIWinCardBattle : MonoBehaviour
     {
         if (name == null)
         {
-            Debug.Log("adsfadsfasfasdfasdfasdfadsfa");
             _winText.text = "Draw";
             _winner.text = "";
         }
         else if (user == 2)
         {
-            Debug.Log("adsfasdfafadfasdfasdfasfasdfa");
             _winText.text = "WIN";
             _winner.text = "Player";
         }
         else if (user == 1)
         {
-            Debug.Log("dsafasfadsfasdfasdfadsfasfasdf");
             _winText.text = "WIN";
             _winner.text = "Boss";
         }

@@ -26,7 +26,7 @@ public class UIGameOverAndClear : MonoBehaviour
         _bossHealth = boss;
         _bossHealth.DeadEvent += Clear;
     }
-    
+
     public void SetHp(BossHealth boss)
     {
         _bossHealth = boss;
@@ -35,7 +35,6 @@ public class UIGameOverAndClear : MonoBehaviour
 
     public void GameOver()
     {
-        //Time.timeScale = 0;
         _gameOver.SetActive(true);
     }
 
