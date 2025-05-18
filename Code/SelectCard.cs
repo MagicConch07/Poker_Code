@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class SelectCard : MonoBehaviour
 {
-    // TODO : 이거 실제 카드에다가 적용시켜서 그 카드 가져와야 함
     [SerializeField] private MovingCard _cardPrefab;
     [SerializeField] private Transform[] _cardPosition;
 
     private Dictionary<int, MovingCard> _movingCards = new Dictionary<int, MovingCard>();
-    
+
     private Player _player;
     private AgentMovement _agentMovement;
 
-    // Test
     public Ease ease;
     private int posIndex = 0;
 
@@ -47,7 +45,7 @@ public class SelectCard : MonoBehaviour
             card.Move(_cardPosition[posIndex], 1f, 1f, ease);
 
             _movingCards.Add(posIndex, card);
-            
+
             _cardIndex++;
             posIndex++;
         }
@@ -55,7 +53,6 @@ public class SelectCard : MonoBehaviour
 
     public void SetCard()
     {
-        // TODO : 모든 카드 없애기 (방식 바꿔야 함)
         foreach (var card in _movingCards)
         {
             card.Value.StopDOTween();

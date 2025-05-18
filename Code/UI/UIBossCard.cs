@@ -29,16 +29,6 @@ public class UIBossCard : MonoBehaviour
         _boss.OnCardSelected -= HandleCards;
     }
 
-    private void Start()
-    {
-        //PlayerManager.Instance.player.OnCardSelected += HandleCards;
-    }
-
-    private void OnDestroy()
-    {
-        //PlayerManager.Instance.player.OnCardSelected -= HandleCards;
-    }
-
     private void HandleCards(Card card)
     {
         if (_cardIndex <= 5)

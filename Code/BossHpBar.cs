@@ -7,8 +7,6 @@ using Random = UnityEngine.Random;
 
 public class BossHpBar : MonoBehaviour
 {
-    // TODO : 보스 맞으면 체력 바 닳고 이펙트 나와야 함
-
     [SerializeField] private GameObject[] _chipPrefab;
     [SerializeField] private RectTransform _chipTrm;
     private BossHealth _bossHealth;
@@ -21,7 +19,6 @@ public class BossHpBar : MonoBehaviour
     {
         _child = transform.GetChild(0);
         SettingHp(); 
-        // TODO : 생성 후 Image 갖고 와서 조지기
         _chips = _child.GetComponentsInChildren<Image>();
         
         _hpIndex = _chips.Length - 1;
